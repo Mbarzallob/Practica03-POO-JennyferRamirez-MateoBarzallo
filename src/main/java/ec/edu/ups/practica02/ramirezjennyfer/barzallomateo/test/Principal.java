@@ -1,7 +1,7 @@
 /*
      * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package ec.edu.ups.practica02.ramirezjennyfer.barzallomateo.vista;
+package ec.edu.ups.practica02.ramirezjennyfer.barzallomateo.test;
 
 import java.util.Scanner;
 import ec.edu.ups.practica02.ramirezjennyfer.barzallomateo.controlador.ControladorPersona;
