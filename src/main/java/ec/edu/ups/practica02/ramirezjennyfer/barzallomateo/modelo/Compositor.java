@@ -39,20 +39,6 @@ public class Compositor extends Persona {
     public void setNumeroDeComposiciones(int numeroDeComposiciones) {
         this.numeroDeComposiciones = numeroDeComposiciones;
     }
-    // Getter y setter del Atributo cancionesTop100Bilboard de la listaCantante
-    public List<Cancion> getCancionesTop100Bilboard() {
-        return cancionesTop100Bilboard;
-    }
-    public void setCancionesTop100Bilboard(List<Cancion> cancionesTop100Bilboard) {
-        this.cancionesTop100Bilboard = cancionesTop100Bilboard;
-    }
-    // Getter y setter del Atributo clientes de la listaCantante
-    public List<Cantante> getClientes() {
-        return clientes;
-    }
-    public void setClientes(List<Cantante> clientes) {
-        this.clientes = clientes;
-    }
 
     // Metodo hashCode: Metodo que compara los objetos pasados devolviendo un numero entero 
     @Override

@@ -73,13 +73,7 @@ public class Cantante extends Persona{
     public void setNumeroDeGiras(int numeroDeGiras) {
         this.numeroDeGiras = numeroDeGiras;
     }
-    // Getter y setter del Atributo discografia de la Lista Disco
-    public List<Disco> getDiscografia() {
-        return discografia;
-    }
-    public void setDiscografia(List<Disco> discografia) {
-        this.discografia = discografia;
-    }
+
 
     // Metodo hashCode: Metodo que compara los objetos pasados devolviendo un numero entero 
     @Override
