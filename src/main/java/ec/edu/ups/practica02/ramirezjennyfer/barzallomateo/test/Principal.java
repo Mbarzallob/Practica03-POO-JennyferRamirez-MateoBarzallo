@@ -14,7 +14,7 @@ import ec.edu.ups.practica02.ramirezjennyfer.barzallomateo.modelo.Persona;
  * @author SOPORTETICS
  */
 public class Principal {
-
+    //hola 
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
