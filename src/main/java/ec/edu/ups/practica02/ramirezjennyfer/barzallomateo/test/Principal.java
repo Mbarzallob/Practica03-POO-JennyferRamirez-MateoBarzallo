@@ -20,7 +20,7 @@ import ec.edu.ups.practica02.ramirezjennyfer.barzallomateo.vista.VistaCompositor
  * @author SOPORTETICS
  */
 public class Principal {
-
+    //hola 
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
