@@ -53,19 +53,14 @@ public class Disco {
     // Metodo hashCode: Metodo que compara los objetos pasados devolviendo un numero entero 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 17 * hash + this.codigo;
-        hash = 17 * hash + Objects.hashCode(this.nombre);
-        hash = 17 * hash + this.anioDeLanzamiento;
+        int hash = 7;
+        hash = 97 * hash + this.codigo;
         return hash;
     }
 
-    // Metodo equals: Metodo que permite comparar si los objetos son del mismo tipo
+    // Metodo equals: Metodo que permite comparar si los objetos son del mismo tipo   
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if (obj == null) {
             return false;
         }
@@ -73,14 +68,12 @@ public class Disco {
             return false;
         }
         final Disco other = (Disco) obj;
-        if (this.codigo != other.codigo) {
+        if (this.codigo != other.getCodigo()) {
             return false;
         }
-        if (this.anioDeLanzamiento != other.anioDeLanzamiento) {
-            return false;
-        }
-        return Objects.equals(this.nombre, other.nombre);
+        return true;
     }
+
 
     // Metodo To String
     @Override

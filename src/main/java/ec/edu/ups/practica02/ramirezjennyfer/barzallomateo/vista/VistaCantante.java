@@ -50,25 +50,14 @@ public class VistaCantante {
 
         //Se crea un objeto de la Clase Cantante
         Cantante cantante = new Cantante(nombreArtistico, generoMusical, nSensillos, nConciertos, nGiras, codigo, nombre, apellido, edad, nacionalidad, salario);
-        System.out.println("Ingrese el numero de discos del cantante: ");
-        //Se ingresa un numero por consola para ingresar una cantidad de discos con el bucle For
-        int cantidad = entrada.nextInt();
-        for (int i = 0; i < cantidad; i++) {
-            System.out.println("Ingresar el codigo del disco: ");
-            int codigoCantante = entrada.nextInt();
-            System.out.println("Ingresar el año de lanzamiento:");
-            int anioDeLanzamiento = entrada.nextInt();
-            entrada.nextLine();
-            System.out.println("Ingresar el nombre del disco: ");
-            String nombreCancion = entrada.nextLine();
-            cantante.agregarDisco(codigoCantante, nombreCancion, anioDeLanzamiento);
-        }
+
         return cantante;
     }
 
     public Cantante actualizarCantante() {
         System.out.println("Ingrese el codigo del cantante a actualizar");
         int codigo = entrada.nextInt();
+        entrada.nextLine();
         System.out.println("Ingrese los nuevos datos del compositor");
         System.out.println("Ingresar el nombre del cantante: ");
         String nombre = entrada.nextLine();
@@ -103,7 +92,7 @@ public class VistaCantante {
 
     }
     public int buscarCantante(){
-        System.out.println("Ingrese el codigo del cantante a eliminar");
+        System.out.println("Ingrese el codigo del cantante a buscar");
         int codigo = entrada.nextInt();
         return codigo;
     }
@@ -118,5 +107,11 @@ public class VistaCantante {
             System.out.println("Datos del cantante: "+ cantante);
         }
         
+    }
+    
+    public String buscarPorDisco(){
+        System.out.println("Ingrese el nombre del disco");
+        String nombre = entrada.nextLine();
+        return nombre;
     }
 }

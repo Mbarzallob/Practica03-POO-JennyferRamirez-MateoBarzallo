@@ -73,27 +73,23 @@ public class Cantante extends Persona{
     public void setNumeroDeGiras(int numeroDeGiras) {
         this.numeroDeGiras = numeroDeGiras;
     }
+    
+    
+    
 
 
     // Metodo hashCode: Metodo que compara los objetos pasados devolviendo un numero entero 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 83 * hash + Objects.hashCode(this.nombreArtistico);
-        hash = 83 * hash + Objects.hashCode(this.generoMusical);
-        hash = 83 * hash + this.numeroDeSencillos;
-        hash = 83 * hash + this.numeroDeConciertos;
-        hash = 83 * hash + this.numeroDeGiras;
-        hash = 83 * hash + Objects.hashCode(this.discografia);
+        hash = 97 * hash + super.getCodigo();
         return hash;
     }
+
 
     // Metodo equals: Metodo que permite comparar si los objetos son del mismo tipo
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if (obj == null) {
             return false;
         }
@@ -101,30 +97,43 @@ public class Cantante extends Persona{
             return false;
         }
         final Cantante other = (Cantante) obj;
-        if (this.numeroDeSencillos != other.numeroDeSencillos) {
+        if (super.getCodigo() != other.getCodigo()) {
             return false;
         }
-        if (this.numeroDeConciertos != other.numeroDeConciertos) {
-            return false;
-        }
-        if (this.numeroDeGiras != other.numeroDeGiras) {
-            return false;
-        }
-        if (!Objects.equals(this.nombreArtistico, other.nombreArtistico)) {
-            return false;
-        }
-        if (!Objects.equals(this.generoMusical, other.generoMusical)) {
-            return false;
-        }
-        return Objects.equals(this.discografia, other.discografia);
+        return true;
     }
+
 
     // Metodo el cual agrega un disco en la clase Cantante
-    public void agregarDisco(int codigo, String nombre, int anioDeLanzamiento){
-        Disco disco = new Disco(codigo, nombre, anioDeLanzamiento);
+    public void agregarDisco(Disco disco){
         discografia.add(disco);
     }
-
+    
+    public void actualizarDisco(Disco disco){
+        if(discografia.contains(disco)){
+            int index = discografia.indexOf(disco);
+            discografia.set(index, disco);
+        }
+    }
+            
+public void eliminarDisco(Disco disco){
+    if(discografia.contains(disco)){
+        int index = discografia.indexOf(disco);
+        discografia.remove(index);
+    }
+}
+    public List<Disco> listarDiscos() {
+        return discografia;
+    }
+public Disco buscarDisco(int codigo){
+    for(Disco disco: discografia){
+        if(disco.getCodigo()==codigo){
+            return disco;
+        }
+    }
+    return null;
+}
+    
     // Metodo calcularSalario valor extra 
     @Override
     public double calcularSalario() {
@@ -145,6 +154,6 @@ public class Cantante extends Persona{
     // Metodo To String
     @Override
     public String toString() {
-        return "Cantante{" + "nombreArtistico=" + nombreArtistico + ", generoMusical=" + generoMusical + ", numeroDeSencillos=" + numeroDeSencillos + ", numeroDeConciertos=" + numeroDeConciertos + ", numeroDeGiras=" + numeroDeGiras + ", discografia=" + discografia + '}';
+        return "Cantante{" +super.toString()+ "nombreArtistico=" + nombreArtistico + ", generoMusical=" + generoMusical + ", numeroDeSencillos=" + numeroDeSencillos + ", numeroDeConciertos=" + numeroDeConciertos + ", numeroDeGiras=" + numeroDeGiras + ", /ndiscografia=" + discografia + '}';
     }
 }

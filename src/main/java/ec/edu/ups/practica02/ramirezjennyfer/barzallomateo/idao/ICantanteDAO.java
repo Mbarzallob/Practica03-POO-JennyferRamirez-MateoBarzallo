@@ -17,5 +17,6 @@ public interface ICantanteDAO {
     public void update(Cantante cantante);
     public void delete(Cantante cantante);
     public List<Cantante> findAll();
+    public Cantante buscarPorDisco(String nombre);
     
 }
